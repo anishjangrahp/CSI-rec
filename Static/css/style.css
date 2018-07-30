@@ -1,0 +1,101 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+
+    background: url("img-jumbotron-bg.jpg") !important;
+    background-attachment: fixed !important;
+    background-size: auto !important;
+
+}
+
+.jumbotron {
+    background: transparent;
+    color: white;
+}
+
+#logout:hover {
+    cursor: pointer;
+}
+
+.heading {
+    color: white;
+}
+
+.form {
+    position: relative;
+    width: 50%;
+    margin-top: -1rem;
+    padding: 10px;
+    color: black;
+    background-color: #fff;
+    opacity: 0.4;
+    border-radius: 8px
+    /*border: 1.5px solid #0e1555;*/
+}
+
+.form-heading {
+    /*margin: auto;*/
+    text-align: center;
+}
+
+label {
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: black;
+    background-color: transparent;
+    /*background-clip: padding-box;*/
+    border: 1.10px solid #0e1555;
+    /*border-radius: .25rem;*/
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+input {
+    margin-bottom: 5px;
+    background: transparent;
+}
+
+.navbar-brand {
+    /*font-family: 'Lobster', cursive;*/
+    font-family: 'Merienda', cursive;
+    font-size: 50px;
+    color: #ff035e !important;
+    margin-right: 50px;
+}
+
+.nav-item {
+    font-size: 25px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    color: white !important;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.nav-link:hover {
+    color: #ff035e !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ff035e !important;
+}
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+

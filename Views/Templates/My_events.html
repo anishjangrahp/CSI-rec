@@ -1,0 +1,26 @@
+$def with(events)
+        <div class="container">
+            <h2 style="color: white">Events added by you</h2>
+            <br>
+            <div class="container">
+                $for event in events:
+                        <div class="card" style="width: 18rem; opacity: 0.6; float: left; margin-right:70px; margin-bottom: 20px">
+                            <div class="card-body">
+                                <p class="card-text">Society: $event['society']</p>
+                                <p class="card-text">Event: $event['event-name']</p>
+
+                                <p class="card-text">Date: $event['date']</p>
+                                <p class="card-text">Time: $event['time']</p>
+                                <p class="card-text">Venue: $event['venue']</p>
+                                <p class="card-text">Duration: $event['duration']</p>
+                                <p class="card-text">Desc: $event['description']</p>
+                                <form action="/delete/$event['_id']" method="post">
+                                    <button class="btn btn-info" type="submit">Delete</button>
+                                </form>
+                                <!-- <a href="/my-events" class="delete">Delete</a>  -->
+                                <p>added $event['timestamp']</p>
+                                <p>updated $event['updatestamp']</p>
+                            </div>
+                        </div>
+            </div>
+        </div>

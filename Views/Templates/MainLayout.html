@@ -1,0 +1,88 @@
+$def with(main)
+$var css: static/css/style.css
+$var js: static/js/script.js
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>events@NSIT</title>
+    <!-- bootstrap   -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+
+
+    <!-- static css -->
+    $if self.css:
+        $for styles in self.css.split():
+            <link rel="stylesheet" href="$styles"/>
+</head>
+<body>
+<!-- navigation bar  -->
+<div id="header-bar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <a class="navbar-brand" href="/">events@NSIT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><span class="mdi mdi-home">Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events"><span class="mdi mdi-calendar">Events</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gallery"><span class="mdi mdi-file-image"></span>Gallery</a>
+                </li>
+                <li class="nav-item">
+                    $if session['user'] == None:
+                        <a class="nav-link" href="/register"><span class="mdi mdi-plus">Add Event</span></a>
+                    $else:
+                        <a class="nav-link" href="/addEvent"<span class="mdi mdi-plus">>Add Event</span></a>
+                </li>
+            </ul>
+            $if session['user'] == None:
+                <a href="/login" class="btn-btn-raised nav-item nav-link nav-button">Login<span class="mdi mdi-login"></span></a>
+                <a href="/register" class="btn-btn-raised nav-item nav-link nav-button">Register<span class="mdi mdi-account-plus"></span></a>
+            $else:
+                <a id="my-events" href="/my-events" class="btn-btn-raised nav-item nav-link nav-button">My Events<span class="mdi mdi-account"></span></a>
+                <a id="update-events" href="/update-events" class="btn-btn-raised nav-item nav-link nav-button">Update
+                    Events<span class="mdi mdi-update"></span></a>
+                <a id="logout" class="btn-btn-raised nav-item nav-link nav-button">Logout<span class="mdi mdi-logout"></span></a>
+        </div>
+    </nav>
+    <br>
+</div>
+
+
+$:main
+$if self.js:
+    $for scripts in self.js.split():
+        <script src="$scripts"></script>
+
+</body>
+</html>

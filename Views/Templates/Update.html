@@ -1,0 +1,33 @@
+$def with(events)
+
+<div class="container form-heading col-md-4">
+    <h2 class="heading">Update Events</h2>
+</div>
+<br>
+    $for event in events:
+        <div class="container form col-md-4" style="float:left; margin-left:10rem; margin-top: 5px; margin-bottom:20px" >
+            <form action="/updt/$event['_id']" method="post">
+                <div class="form-group">
+                    <label for="society">Society:</label>
+                    <input name="society" type="text" class="form-control" id="society" placeholder="Enter Society"
+                           value="$event['society']">
+
+                    <label for="eventname">Event:</label>
+                    <input name="eventname" type="text" value="$event['event-name']" class="form-control" id="eventname" placeholder="Enter Name of event">
+
+                    <label>Date:</label><br>
+                    <input name="date" type="date" class="form-control" value=$event['date']>
+                    <label>Time:</label><br>
+                    <input name="time" type="time" class="form-control" value=$event['time']>
+                    <label for="duration">Duration:</label>
+                    <input name="duration" type="text" class="form-control" id="duration" value="$event['duration']" placeholder="Enter duration">
+
+                    <label for="venue">Venue:</label>
+                    <input name="venue" type="text" class="form-control" id="venue" value="$event['venue']" placeholder="Enter Venue">
+
+                    <label for="desc">Description:</label>
+                    <textarea id="desc" class="form-control" name="desc" placeholder="Add event description">$event['description']</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Event</button>
+            </form>
+        </div>
