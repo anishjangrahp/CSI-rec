@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="047e6731-a558-4b2d-8d62-ef2caa941ca2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sessions/be6ca9040803d8589881aa85081fef1507042587" beforeDir="false" afterPath="$PROJECT_DIR$/sessions/be6ca9040803d8589881aa85081fef1507042587" afterDir="false" />
-    </list>
+    <list default="true" id="047e6731-a558-4b2d-8d62-ef2caa941ca2" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
