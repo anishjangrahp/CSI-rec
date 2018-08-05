@@ -3,7 +3,7 @@
 1. Install [Python](https://www.python.org/downloads/) on your PC.
 2. Open the project in [JETBRAINS PyCharm](https://www.jetbrains.com/pycharm/).
     ![alt text](screenshots/Project.png)
-3. Click on File->Settings->Project Interpreter and select the interpreter.
+3. Click on File->Settings->Project Interpreter. From drop down select show all and the click + button and select existing environment.
     ![alt text](screenshots/settings.png)
 4. Run [mongoDB](https://www.mongodb.com/download-center?jmp=nav#community) locally on your PC.
     ![alt text](screenshots/Mongo1.png)
